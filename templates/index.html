@@ -1,0 +1,1664 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#090d14">
+<meta name="description" content="Joel Obiabo — Full-Stack Developer & Product Builder. I build useful digital products with thoughtful engineering and visual design.">
+
+<title>Joel Obiabo — Full-Stack Developer & Product Builder</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+/* =========================================
+   1. GLOBAL VARIABLES & RESET
+========================================= */
+
+:root {
+    --bg:#090d14;
+    --panel:#101722;
+    --panel2:#131e2b;
+    --line:rgba(160,185,210,.13);
+    --text:#edf4fa;
+    --muted:#9aabba;
+    --cyan:#69d9df;
+    --violet:#a99aff;
+    --lime:#c7ef9a;
+    --max:1160px;
+}
+
+* {
+    box-sizing:border-box;
+}
+
+html {
+    scroll-behavior:smooth;
+}
+
+body {
+    margin:0;
+    background:
+        radial-gradient(ellipse at 80% 0%,rgba(76,116,164,.13),transparent 34%),
+        radial-gradient(ellipse at 0% 38%,rgba(105,217,223,.07),transparent 32%),
+        var(--bg);
+    color:var(--text);
+    font-family:Manrope,system-ui,sans-serif;
+    line-height:1.65;
+}
+
+a {
+    color:inherit;
+    text-decoration:none;
+}
+
+button {
+    font:inherit;
+}
+
+.wrap {
+    width:min(var(--max),calc(100% - 44px));
+    margin:auto;
+}
+
+.mono,.eyebrow,.tag,.navlinks a,.index {
+    font-family:'DM Mono',monospace;
+}
+
+.eyebrow {
+    font-size:.72rem;
+    letter-spacing:.16em;
+    text-transform:uppercase;
+    color:var(--cyan);
+}
+
+.muted {
+    color:var(--muted);
+}
+
+
+/* =========================================
+   2. GENERAL SECTIONS
+========================================= */
+
+.section {
+    padding:104px 0;
+    border-top:1px solid var(--line);
+}
+
+.section-head {
+    display:flex;
+    justify-content:space-between;
+    align-items:end;
+    gap:24px;
+    margin-bottom:34px;
+}
+
+.section-head h2 {
+    font-size:clamp(2rem,4vw,3.2rem);
+    line-height:1.1;
+    letter-spacing:-.055em;
+    margin:10px 0 0;
+}
+
+.section-head p {
+    max-width:430px;
+    color:var(--muted);
+    margin:0;
+}
+
+
+/* =========================================
+   3. NAVIGATION
+========================================= */
+
+.nav {
+    position:sticky;
+    top:0;
+    z-index:10;
+    background:rgba(9,13,20,.82);
+    backdrop-filter:blur(18px);
+    border-bottom:1px solid var(--line);
+}
+
+.navinner {
+    height:76px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.brand {
+    font-weight:800;
+    letter-spacing:-.04em;
+    font-size:1.05rem;
+}
+
+.brand span {
+    color:var(--cyan);
+}
+
+.navlinks {
+    display:flex;
+    align-items:center;
+    gap:28px;
+    font-size:.78rem;
+    color:#c4d0dc;
+}
+
+.navlinks a:hover {
+    color:var(--cyan);
+}
+
+.nav-cta,.button {
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    border:1px solid rgba(105,217,223,.42);
+    background:rgba(105,217,223,.1);
+    padding:12px 17px;
+    border-radius:7px;
+    color:#dffcff;
+    font-size:.82rem;
+    font-weight:700;
+    transition:.2s;
+}
+
+.nav-cta:hover,.button:hover {
+    background:rgba(105,217,223,.19);
+    transform:translateY(-2px);
+}
+
+.button.primary {
+    background:var(--cyan);
+    color:#071216;
+    border-color:var(--cyan);
+}
+
+.menu {
+    display:none;
+    background:none;
+    border:1px solid var(--line);
+    color:var(--text);
+    padding:9px 12px;
+    border-radius:7px;
+}
+
+
+/* =========================================
+   4. HERO SECTION
+========================================= */
+
+.hero {
+    padding:82px 0 94px;
+    min-height:650px;
+    display:grid;
+    grid-template-columns:1.12fr .88fr;
+    align-items:center;
+    gap:64px;
+}
+
+.hero h1 {
+    font-size:clamp(3.3rem,7.4vw,6.3rem);
+    line-height:.99;
+    letter-spacing:-.085em;
+    margin:22px 0;
+}
+
+.hero h1 em {
+    font-style:normal;
+    color:var(--cyan);
+}
+
+.hero-copy {
+    max-width:590px;
+    font-size:1.05rem;
+    color:#b4c1cd;
+}
+
+.hero-actions {
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
+    margin:30px 0 28px;
+}
+
+.availability {
+    display:flex;
+    align-items:center;
+    gap:9px;
+    color:#b7c5d1;
+    font:.72rem 'DM Mono',monospace;
+}
+
+.dot {
+    width:8px;
+    height:8px;
+    border-radius:50%;
+    background:var(--lime);
+    box-shadow:0 0 14px var(--lime);
+}
+
+.microline {
+    display:flex;
+    gap:22px;
+    flex-wrap:wrap;
+    margin-top:38px;
+    color:#8092a4;
+    font:.68rem 'DM Mono',monospace;
+}
+
+.microline span:before {
+    content:'↗';
+    color:var(--cyan);
+    margin-right:8px;
+}
+
+
+/* =========================================
+   5. PROFILE IMAGE SECTION
+
+   IMPORTANT:
+   This section controls the portrait frame
+   and the image displayed inside it.
+
+   .portrait-wrap = Entire portrait area
+   .portrait-frame = The actual image frame
+   .portrait-frame img = Your profile picture
+
+   Adjust the image positioning without
+   moving the frame itself.
+========================================= */
+
+.portrait-wrap {
+    position:relative;
+    max-width:420px;
+    margin-left:auto;
+    width:100%;
+}
+
+/* The frame surrounding your picture */
+.portrait-frame {
+    position:relative;
+    aspect-ratio:4/5;
+    border-radius:18px;
+    overflow:hidden;
+    border:1px solid rgba(105,217,223,.3);
+    background:linear-gradient(145deg,#172536,#111722 58%,#262143);
+    box-shadow:0 30px 90px rgba(0,0,0,.35);
+}
+
+/* =========================================
+   PROFILE IMAGE POSITION CONTROLS
+
+   object-fit: cover
+   Makes your picture fill the frame.
+
+   object-position: 35% 30%
+   First value = Horizontal positioning.
+   Second value = Vertical positioning.
+
+   HORIZONTAL:
+   0%   = Left
+   35%  = More towards the left
+   50%  = Center
+   70%  = More towards the right
+   100% = Right
+
+   VERTICAL:
+   0%   = Top
+   30%  = Towards the top
+   50%  = Center
+   70%  = Towards the bottom
+   100% = Bottom
+
+   Change these values until your face
+   and upper body fit properly in the frame.
+========================================= */
+
+.portrait-frame img {
+    width:100%;
+    height:100%;
+    object-fit:cover;
+
+    /* EDIT THESE TWO VALUES TO REPOSITION YOUR IMAGE */
+    object-position:35% 30%;
+
+    display:block;
+}
+
+/* Placeholder shown when no profile image is available */
+.portrait-placeholder {
+    height:100%;
+    display:flex;
+    flex-direction:column;
+    justify-content:end;
+    padding:28px;
+    background:
+        radial-gradient(circle at 50% 35%,rgba(105,217,223,.25),transparent 36%),
+        linear-gradient(150deg,#172536,#0b111b 70%,#211e39);
+}
+
+.portrait-placeholder .silhouette {
+    position:absolute;
+    left:50%;
+    top:18%;
+    transform:translateX(-50%);
+    width:48%;
+    height:62%;
+    border-radius:48% 48% 18% 18%;
+    background:linear-gradient(135deg,#d4a78b,#815d58 58%,#263448);
+    opacity:.8;
+    filter:blur(1px);
+}
+
+.portrait-placeholder strong {
+    font-size:1.2rem;
+    z-index:1;
+}
+
+.portrait-placeholder small {
+    color:#b4c1cd;
+    z-index:1;
+}
+
+/* Decorative text beside the picture */
+.portrait-note {
+    position:absolute;
+    left:-30px;
+    bottom:34px;
+    background:#111a26;
+    border:1px solid var(--line);
+    padding:13px 16px;
+    border-radius:9px;
+    font:.7rem 'DM Mono',monospace;
+    color:#d8e4ed;
+    box-shadow:0 14px 30px #0006;
+}
+
+.portrait-note span {
+    color:var(--cyan);
+}
+
+/* Decorative border behind the image */
+.hero-grid {
+    position:absolute;
+    inset:-18px -18px 18px 18px;
+    border:1px solid rgba(169,154,255,.16);
+    border-radius:20px;
+    pointer-events:none;
+}
+
+
+/* =========================================
+   6. INTRO STRIP
+========================================= */
+
+.intro-strip {
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:12px;
+    margin-top:8px;
+}
+
+.strip-item {
+    padding:18px;
+    border:1px solid var(--line);
+    background:rgba(16,23,34,.62);
+    border-radius:9px;
+}
+
+.strip-item b {
+    display:block;
+    font-size:.95rem;
+}
+
+.strip-item span {
+    font-size:.75rem;
+    color:var(--muted);
+}
+
+
+/* =========================================
+   7. ABOUT SECTION
+========================================= */
+
+.about-grid {
+    display:grid;
+    grid-template-columns:1.1fr .9fr;
+    gap:60px;
+}
+
+.about-text {
+    font-size:1.05rem;
+    color:#b7c5d1;
+}
+
+.about-text p {
+    margin-top:0;
+}
+
+.quote {
+    border-left:2px solid var(--cyan);
+    padding:6px 0 6px 22px;
+    color:#e4edf5;
+    font-size:1.1rem;
+    margin-top:28px;
+}
+
+.principles {
+    display:grid;
+    gap:12px;
+}
+
+.principle {
+    display:flex;
+    gap:15px;
+    padding:18px;
+    border:1px solid var(--line);
+    border-radius:9px;
+    background:rgba(16,23,34,.58);
+}
+
+.principle .n {
+    font:.75rem 'DM Mono',monospace;
+    color:var(--cyan);
+}
+
+.principle b {
+    display:block;
+    font-size:.9rem;
+}
+
+.principle small {
+    color:var(--muted);
+}
+
+
+/* =========================================
+   8. PROJECTS SECTION
+========================================= */
+
+.projects {
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:16px;
+}
+
+.project {
+    min-height:285px;
+    padding:26px;
+    border:1px solid var(--line);
+    border-radius:12px;
+    background:linear-gradient(145deg,rgba(19,30,43,.94),rgba(13,19,29,.94));
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    transition:.25s;
+    position:relative;
+    overflow:hidden;
+}
+
+.project:after {
+    content:'';
+    position:absolute;
+    width:220px;
+    height:220px;
+    border-radius:50%;
+    right:-120px;
+    top:-120px;
+    background:var(--glow,rgba(105,217,223,.12));
+    filter:blur(5px);
+}
+
+.project:hover {
+    transform:translateY(-4px);
+    border-color:rgba(105,217,223,.4);
+}
+
+.project-top {
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:relative;
+    z-index:1;
+}
+
+.index {
+    font-size:.7rem;
+    color:var(--cyan);
+}
+
+.project-type {
+    font:.65rem 'DM Mono',monospace;
+    color:#a8b6c5;
+    text-transform:uppercase;
+    letter-spacing:.08em;
+}
+
+.project h3 {
+    font-size:1.55rem;
+    letter-spacing:-.05em;
+    margin:24px 0 8px;
+    position:relative;
+    z-index:1;
+}
+
+.project p {
+    color:var(--muted);
+    font-size:.87rem;
+    max-width:480px;
+    margin:0 0 22px;
+    position:relative;
+    z-index:1;
+}
+
+.tags {
+    display:flex;
+    gap:7px;
+    flex-wrap:wrap;
+    position:relative;
+    z-index:1;
+}
+
+.tag {
+    font-size:.65rem;
+    padding:6px 9px;
+    border:1px solid var(--line);
+    border-radius:5px;
+    color:#c3d0dc;
+    background:#ffffff06;
+}
+
+.project-foot {
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-top:22px;
+    position:relative;
+    z-index:1;
+    color:var(--cyan);
+    font-size:.76rem;
+}
+
+
+/* =========================================
+   9. SKILLS SECTION
+========================================= */
+
+.skills-grid {
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:14px;
+}
+
+.skill-card {
+    padding:23px;
+    border:1px solid var(--line);
+    border-radius:10px;
+    background:rgba(16,23,34,.65);
+}
+
+.skill-card .symbol {
+    font-size:1.35rem;
+    color:var(--cyan);
+}
+
+.skill-card h3 {
+    font-size:1rem;
+    margin:13px 0 7px;
+}
+
+.skill-card p {
+    font-size:.8rem;
+    color:var(--muted);
+    margin:0 0 15px;
+}
+
+.skill-list {
+    display:flex;
+    flex-wrap:wrap;
+    gap:7px;
+}
+
+.skill-list span {
+    font-size:.68rem;
+    color:#cbd7e2;
+    background:#ffffff08;
+    padding:6px 8px;
+    border-radius:5px;
+}
+
+
+/* =========================================
+   10. JOURNEY SECTION
+========================================= */
+
+.journey {
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:14px;
+}
+
+.journey article {
+    padding:22px;
+    border-top:1px solid var(--cyan);
+    background:linear-gradient(180deg,rgba(105,217,223,.06),transparent);
+}
+
+.journey h3 {
+    font-size:1rem;
+    margin:12px 0 6px;
+}
+
+.journey p {
+    font-size:.82rem;
+    color:var(--muted);
+    margin:0;
+}
+
+
+/* =========================================
+   11. CONTACT SECTION
+========================================= */
+
+.contact-panel {
+    display:grid;
+    grid-template-columns:1fr auto;
+    gap:30px;
+    align-items:center;
+    padding:38px;
+    border:1px solid rgba(105,217,223,.25);
+    border-radius:14px;
+    background:radial-gradient(ellipse at 100% 0%,rgba(105,217,223,.1),transparent 50%),#101722;
+}
+
+.contact-panel h2 {
+    font-size:clamp(2rem,4vw,3.4rem);
+    line-height:1.1;
+    letter-spacing:-.06em;
+    margin:12px 0;
+}
+
+.contact-panel p {
+    max-width:560px;
+    color:var(--muted);
+}
+
+
+/* =========================================
+   12. FOOTER & ANIMATIONS
+========================================= */
+
+footer {
+    padding:26px 0 40px;
+    color:#7f91a2;
+    font:.68rem 'DM Mono',monospace;
+    display:flex;
+    justify-content:space-between;
+    gap:20px;
+}
+
+.reveal {
+    opacity:0;
+    transform:translateY(18px);
+    transition:.65s ease;
+}
+
+.reveal.show {
+    opacity:1;
+    transform:none;
+}
+
+.toast {
+    position:fixed;
+    bottom:20px;
+    left:50%;
+    transform:translate(-50%,20px);
+    opacity:0;
+    pointer-events:none;
+    background:#1a2938;
+    border:1px solid var(--line);
+    padding:12px 17px;
+    border-radius:8px;
+    font-size:.8rem;
+    transition:.2s;
+}
+
+.toast.show {
+    opacity:1;
+    transform:translate(-50%,0);
+}
+
+
+/* =========================================
+   13. TABLET & MOBILE RESPONSIVENESS
+========================================= */
+
+@media(max-width:800px) {
+
+    .navlinks {
+        display:none;
+        position:absolute;
+        top:76px;
+        left:0;
+        right:0;
+        padding:20px 24px;
+        background:#0d141e;
+        border-bottom:1px solid var(--line);
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
+    .navlinks.open {
+        display:flex;
+    }
+
+    .menu {
+        display:block;
+    }
+
+    .nav-cta {
+        display:none;
+    }
+
+    .hero {
+        grid-template-columns:1fr;
+        gap:42px;
+        padding-top:62px;
+    }
+
+    .hero-copy {
+        font-size:.96rem;
+    }
+
+    .portrait-wrap {
+        max-width:360px;
+        margin:0 auto;
+    }
+
+    .hero h1 {
+        font-size:clamp(3.2rem,12vw,5.5rem);
+    }
+
+    .about-grid {
+        grid-template-columns:1fr;
+        gap:32px;
+    }
+
+    .skills-grid {
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .section {
+        padding:76px 0;
+    }
+
+    .section-head {
+        display:block;
+    }
+
+    .section-head p {
+        margin-top:15px;
+    }
+
+    .contact-panel {
+        grid-template-columns:1fr;
+    }
+
+    .contact-panel .button {
+        justify-self:start;
+    }
+}
+
+
+@media(max-width:540px) {
+
+    .wrap {
+        width:min(100% - 32px,var(--max));
+    }
+
+    .projects,.skills-grid,.journey,.intro-strip {
+        grid-template-columns:1fr;
+    }
+
+    .project {
+        min-height:255px;
+        padding:22px;
+    }
+
+    .hero {
+        min-height:auto;
+    }
+
+    .portrait-note {
+        left:-8px;
+    }
+
+    .section {
+        padding:66px 0;
+    }
+
+    .contact-panel {
+        padding:25px;
+    }
+
+    footer {
+        flex-direction:column;
+    }
+
+    .hero-actions .button {
+        width:100%;
+    }
+}
+
+
+/* Respect reduced-motion accessibility settings */
+
+@media(prefers-reduced-motion:reduce) {
+
+    *,*:before,*:after {
+        scroll-behavior:auto!important;
+        transition:none!important;
+        animation:none!important;
+    }
+
+    .reveal {
+        opacity:1;
+        transform:none;
+    }
+}
+
+</style>
+</head>
+
+
+<body>
+
+<!-- =========================================
+     NAVIGATION
+========================================= -->
+
+<header class="nav">
+    <div class="wrap navinner">
+
+        <a class="brand" href="#top">
+            JOEL OBIABO<span>.</span>
+        </a>
+
+        <nav class="navlinks" id="navlinks">
+            <a href="#about">ABOUT</a>
+            <a href="#projects">PROJECTS</a>
+            <a href="#skills">SKILLS</a>
+            <a href="#journey">JOURNEY</a>
+            <a href="#contact">CONTACT</a>
+        </nav>
+
+        <a class="nav-cta" href="#contact">Let's talk ↗</a>
+
+        <button class="menu" id="menu" aria-label="Toggle navigation" aria-expanded="false">
+            ☰
+        </button>
+
+    </div>
+</header>
+
+
+<main id="top">
+
+<!-- =========================================
+     HERO SECTION
+========================================= -->
+
+<section class="wrap hero">
+
+    <div>
+
+        <div class="eyebrow">
+            FULL-STACK DEVELOPER & PRODUCT BUILDER
+        </div>
+
+        <h1>
+            Ideas into<br>
+            <em>useful</em><br>
+            products.
+        </h1>
+
+        <p class="hero-copy">
+            I'm Joel Obiabo. I build digital products across web and mobile,
+            explore problems through code, and bring a designer's eye to
+            the experiences people use.
+        </p>
+
+        <div class="hero-actions">
+            <a class="button primary" href="#projects">
+                Explore my work <span>↘</span>
+            </a>
+
+            <a class="button" href="#contact">
+                Get in touch ↗
+            </a>
+        </div>
+
+        <div class="availability">
+            <i class="dot"></i>
+            BUILDING · LEARNING · IMPROVING
+        </div>
+
+        <div class="microline">
+            <span>Backend & web</span>
+            <span>Mobile apps</span>
+            <span>Visual design</span>
+        </div>
+
+    </div>
+
+
+    <!-- PROFILE IMAGE AND FRAME -->
+
+    <div class="portrait-wrap">
+
+        <div class="hero-grid"></div>
+
+        <div class="portrait-frame" id="portrait">
+
+            <div class="portrait-placeholder">
+
+                <div class="silhouette"></div>
+
+                <strong>Joel Obiabo</strong>
+
+                <small>Profile portrait goes here</small>
+
+            </div>
+
+        </div>
+
+        <div class="portrait-note">
+            CREATIVE MINDSET <span>×</span> ENGINEERING
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     INTRO STRIP
+========================================= -->
+
+<div class="wrap intro-strip">
+
+    <div class="strip-item">
+        <b>Build</b>
+        <span>Turning ideas into working products</span>
+    </div>
+
+    <div class="strip-item">
+        <b>Understand</b>
+        <span>Learning the engineering beneath the UI</span>
+    </div>
+
+    <div class="strip-item">
+        <b>Design</b>
+        <span>Making digital experiences feel considered</span>
+    </div>
+
+</div>
+
+
+<!-- =========================================
+     ABOUT SECTION
+========================================= -->
+
+<section class="section" id="about">
+
+<div class="wrap">
+
+    <div class="section-head">
+
+        <div>
+            <div class="eyebrow">01 / A LITTLE ABOUT ME</div>
+            <h2>Engineering meets<br>creative thinking.</h2>
+        </div>
+
+        <p>
+            I enjoy the full process: understanding a problem,
+            shaping an experience, building the product and improving
+            it through iteration.
+        </p>
+
+    </div>
+
+
+    <div class="about-grid">
+
+        <div class="about-text">
+
+            <p>
+                My path brings together software development and visual design.
+                I work across backend, web and mobile technologies, while my
+                graphic design and video-editing experience influences how
+                I think about clarity, presentation and user experience.
+            </p>
+
+            <p>
+                I'm especially interested in building practical products,
+                strengthening my engineering fundamentals and understanding
+                the decisions behind reliable software—not just getting
+                something to run.
+            </p>
+
+            <div class="quote">
+                “Good products bring together useful ideas, thoughtful
+                engineering and experiences people enjoy using.”
+            </div>
+
+        </div>
+
+
+        <div class="principles">
+
+            <div class="principle">
+                <div class="n">01</div>
+                <div>
+                    <b>Build with purpose</b>
+                    <small>Start with the problem, not the technology trend.</small>
+                </div>
+            </div>
+
+            <div class="principle">
+                <div class="n">02</div>
+                <div>
+                    <b>Learn by doing</b>
+                    <small>Turn new concepts into working projects and lessons.</small>
+                </div>
+            </div>
+
+            <div class="principle">
+                <div class="n">03</div>
+                <div>
+                    <b>Care about the details</b>
+                    <small>Make the product clear, usable and visually coherent.</small>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- =========================================
+     PROJECTS SECTION
+========================================= -->
+
+<section class="section" id="projects">
+
+<div class="wrap">
+
+    <div class="section-head">
+
+        <div>
+            <div class="eyebrow">02 / SELECTED WORK</div>
+            <h2>Things I've built.</h2>
+        </div>
+
+        <p>
+            A selection of existing projects across web, backend and mobile.
+            Each project is a chance to solve a different problem and grow
+            as a builder.
+        </p>
+
+    </div>
+
+
+    <div class="projects">
+
+        <article class="project" style="--glow:rgba(105,217,223,.16)">
+
+            <div>
+
+                <div class="project-top">
+                    <span class="index">PROJECT / 01</span>
+                    <span class="project-type">WEB APP · CALCULATOR</span>
+                </div>
+
+                <h3>Calcully</h3>
+
+                <p>
+                    A web-based calculator built with Go, supporting multi-value
+                    expressions and a collection of mathematical operations.
+                    My first independently built Go web application.
+                </p>
+
+                <div class="tags">
+                    <span class="tag">Go</span>
+                    <span class="tag">HTML / CSS</span>
+                    <span class="tag">JavaScript</span>
+                    <span class="tag">PWA</span>
+                </div>
+
+            </div>
+
+            <div class="project-foot">
+                <span>Backend & web development</span>
+                <span>↗</span>
+            </div>
+
+        </article>
+
+
+        <article class="project" style="--glow:rgba(169,154,255,.17)">
+
+            <div>
+
+                <div class="project-top">
+                    <span class="index">PROJECT / 02</span>
+                    <span class="project-type">PLATFORM · CONSTRUCTION</span>
+                </div>
+
+                <h3>BuildNet</h3>
+
+                <p>
+                    A construction-focused platform concept bringing people,
+                    projects and opportunities in the building industry
+                    into one place.
+                </p>
+
+                <div class="tags">
+                    <span class="tag">Product building</span>
+                    <span class="tag">Web platform</span>
+                    <span class="tag">Construction tech</span>
+                </div>
+
+            </div>
+
+            <div class="project-foot">
+                <span>Product design & development</span>
+                <span>↗</span>
+            </div>
+
+        </article>
+
+
+        <article class="project" style="--glow:rgba(199,239,154,.13)">
+
+            <div>
+
+                <div class="project-top">
+                    <span class="index">PROJECT / 03</span>
+                    <span class="project-type">MOBILE APP · DELIVERY</span>
+                </div>
+
+                <h3>Toha</h3>
+
+                <p>
+                    A food-chef delivery mobile application built with Flutter.
+                    A practical project exploring mobile application development
+                    and user-facing flows.
+                </p>
+
+                <div class="tags">
+                    <span class="tag">Dart</span>
+                    <span class="tag">Flutter</span>
+                    <span class="tag">Mobile</span>
+                </div>
+
+            </div>
+
+            <div class="project-foot">
+                <span>Mobile application development</span>
+                <span>↗</span>
+            </div>
+
+        </article>
+
+
+        <article class="project" style="--glow:rgba(105,217,223,.12)">
+
+            <div>
+
+                <div class="project-top">
+                    <span class="index">PROJECT / 04</span>
+                    <span class="project-type">WEB PLATFORM · PRODUCTIVITY</span>
+                </div>
+
+                <h3>Taskflow</h3>
+
+                <p>
+                    A task management platform built with Python and Django,
+                    focused on organizing work and managing tasks through
+                    a web application.
+                </p>
+
+                <div class="tags">
+                    <span class="tag">Python</span>
+                    <span class="tag">Django</span>
+                    <span class="tag">Web development</span>
+                </div>
+
+            </div>
+
+            <div class="project-foot">
+                <span>Backend & web development</span>
+                <span>↗</span>
+            </div>
+
+        </article>
+
+    </div>
+
+
+    <p class="muted" style="font-size:.76rem;margin-top:18px">
+        Project descriptions are intentionally concise. Screenshots,
+        live demos, repositories and deeper case studies can be added
+        once their links and details are confirmed.
+    </p>
+
+</div>
+
+</section>
+
+
+<!-- =========================================
+     SKILLS SECTION
+========================================= -->
+
+<section class="section" id="skills">
+
+<div class="wrap">
+
+    <div class="section-head">
+
+        <div>
+            <div class="eyebrow">03 / WHAT I WORK WITH</div>
+            <h2>A growing toolkit.</h2>
+        </div>
+
+        <p>
+            My skills span software development and creative production.
+            This is a snapshot of the tools I've worked with—not a claim
+            of equal expertise in every area.
+        </p>
+
+    </div>
+
+
+    <div class="skills-grid">
+
+        <div class="skill-card">
+            <div class="symbol">⌘</div>
+            <h3>Backend & Web</h3>
+            <p>Building application logic and web experiences.</p>
+            <div class="skill-list">
+                <span>Go</span>
+                <span>Python</span>
+                <span>Django</span>
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+            </div>
+        </div>
+
+
+        <div class="skill-card">
+            <div class="symbol">▣</div>
+            <h3>Mobile Development</h3>
+            <p>Creating mobile application experiences.</p>
+            <div class="skill-list">
+                <span>Dart</span>
+                <span>Flutter</span>
+            </div>
+        </div>
+
+
+        <div class="skill-card">
+            <div class="symbol">✳</div>
+            <h3>Graphic Design</h3>
+            <p>Visual communication, layouts and creative assets.</p>
+            <div class="skill-list">
+                <span>Photoshop</span>
+                <span>Illustrator</span>
+                <span>Lightroom</span>
+            </div>
+        </div>
+
+
+        <div class="skill-card">
+            <div class="symbol">▶</div>
+            <h3>Video & Motion</h3>
+            <p>Editing and motion-led visual storytelling.</p>
+            <div class="skill-list">
+                <span>After Effects</span>
+                <span>CapCut</span>
+            </div>
+        </div>
+
+
+        <div class="skill-card">
+            <div class="symbol">◈</div>
+            <h3>Product Building</h3>
+            <p>Moving from an idea toward a usable product.</p>
+            <div class="skill-list">
+                <span>Problem solving</span>
+                <span>Prototyping</span>
+                <span>Iteration</span>
+            </div>
+        </div>
+
+
+        <div class="skill-card">
+            <div class="symbol">↗</div>
+            <h3>Currently Growing</h3>
+            <p>Deepening fundamentals through projects and practice.</p>
+            <div class="skill-list">
+                <span>Software architecture</span>
+                <span>Databases</span>
+                <span>Deployment</span>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- =========================================
+     JOURNEY SECTION
+========================================= -->
+
+<section class="section" id="journey">
+
+<div class="wrap">
+
+    <div class="section-head">
+
+        <div>
+            <div class="eyebrow">04 / THE APPROACH</div>
+            <h2>Always building.<br>Always learning.</h2>
+        </div>
+
+        <p>
+            I see every project as both a product and a learning process.
+            The goal is to keep improving the quality of what I can design,
+            build and explain.
+        </p>
+
+    </div>
+
+
+    <div class="journey">
+
+        <article>
+            <div class="eyebrow">01 — EXPLORE</div>
+            <h3>Understand the problem</h3>
+            <p>
+                Research the need, identify the user and decide what
+                a useful first version should do.
+            </p>
+        </article>
+
+        <article>
+            <div class="eyebrow">02 — BUILD</div>
+            <h3>Make it work</h3>
+            <p>
+                Choose appropriate tools, break the work into manageable
+                parts and implement deliberately.
+            </p>
+        </article>
+
+        <article>
+            <div class="eyebrow">03 — IMPROVE</div>
+            <h3>Learn from the result</h3>
+            <p>
+                Test, reflect, refine and document what can be made
+                better next time.
+            </p>
+        </article>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- =========================================
+     CONTACT SECTION
+========================================= -->
+
+<section class="section" id="contact">
+
+<div class="wrap">
+
+    <div class="contact-panel">
+
+        <div>
+
+            <div class="eyebrow">05 / HAVE SOMETHING IN MIND?</div>
+
+            <h2>Let's build<br>something useful.</h2>
+
+            <p>
+                I'm open to conversations about software projects,
+                product ideas, collaboration and creative-technical work.
+                Reach out and let's see what we can make.
+            </p>
+
+        </div>
+
+        <a class="button primary"
+           href="mailto:ADD-YOUR-EMAIL-HERE"
+           id="emailLink">
+            Start a conversation ↗
+        </a>
+
+    </div>
+
+    <p class="muted" style="font-size:.72rem;margin:14px 2px 0">
+        Before publishing, replace the email link with your preferred
+        contact address and add your professional social links.
+    </p>
+
+</div>
+
+</section>
+
+</main>
+
+
+<!-- =========================================
+     FOOTER
+========================================= -->
+
+<footer class="wrap">
+
+    <span>
+        © <span id="year"></span> Joel Obiabo. Built with curiosity.
+    </span>
+
+    <span>FULL-STACK DEVELOPER & PRODUCT BUILDER</span>
+
+</footer>
+
+<div class="toast" id="toast" role="status"></div>
+
+
+<!-- =========================================
+     JAVASCRIPT
+========================================= -->
+
+<script>
+
+/* =========================================
+   1. MOBILE NAVIGATION
+========================================= */
+
+const menu = document.getElementById('menu');
+const nav = document.getElementById('navlinks');
+
+menu.addEventListener('click', () => {
+
+    const open = nav.classList.toggle('open');
+
+    menu.setAttribute('aria-expanded', String(open));
+
+    menu.textContent = open ? '✕' : '☰';
+
+});
+
+nav.querySelectorAll('a').forEach(a => {
+
+    a.addEventListener('click', () => {
+
+        nav.classList.remove('open');
+
+        menu.setAttribute('aria-expanded', 'false');
+
+        menu.textContent = '☰';
+
+    });
+
+});
+
+
+/* =========================================
+   2. AUTOMATIC COPYRIGHT YEAR
+========================================= */
+
+document.getElementById('year').textContent =
+    new Date().getFullYear();
+
+
+/* =========================================
+   3. SCROLL REVEAL ANIMATION
+========================================= */
+
+const observer = new IntersectionObserver(
+    entries => entries.forEach(e => {
+
+        if (e.isIntersecting) {
+
+            e.target.classList.add('show');
+
+            observer.unobserve(e.target);
+
+        }
+
+    }),
+    { threshold:.12 }
+);
+
+document.querySelectorAll('.section,.intro-strip').forEach(el => {
+
+    el.classList.add('reveal');
+
+    observer.observe(el);
+
+});
+
+
+/* =========================================
+   4. LOAD PROFILE IMAGE
+
+   Place your picture here:
+
+   assets/profile.jpg
+
+   Folder structure:
+
+   portfolio/
+   ├── index.html
+   └── assets/
+       └── profile.jpg
+
+   IMPORTANT:
+   The image positioning is controlled here too.
+
+   objectPosition = '35% 30%'
+
+   First value = Horizontal crop.
+   Second value = Vertical crop.
+
+   Adjust these values to fit your face
+   and upper body inside the portrait frame.
+========================================= */
+
+const photo = new Image();
+
+photo.onload = () => {
+
+    const frame = document.getElementById('portrait');
+
+    // Remove the placeholder once the image loads
+    frame.innerHTML = '';
+
+    // Add your actual profile picture
+    frame.appendChild(photo);
+
+    photo.alt = 'Joel Obiabo - Profile portrait';
+
+    // Image styling
+    photo.style.cssText = `
+        width:100%;
+        height:100%;
+        object-fit:cover;
+
+        /* EDIT THESE VALUES TO ADJUST YOUR IMAGE */
+        object-position:65% 35%;
+
+        display:block;
+    `;
+
+};
+
+photo.onerror = () => {
+    // Keep the placeholder if the image cannot be loaded
+};
+
+photo.src = 'assets/profile.jpg';
+
+
+/* =========================================
+   5. CONTACT EMAIL / TOAST
+========================================= */
+
+const emailLink = document.getElementById('emailLink');
+
+emailLink.addEventListener('click', e => {
+
+    if (emailLink.getAttribute('href').includes('joelobiabo@gmail.com')) {
+
+        e.preventDefault();
+
+        const toast = document.getElementById('toast');
+
+        toast.textContent = 'joelobiabo@gmail.com';
+
+        toast.classList.add('show');
+
+        setTimeout(() => {
+
+            toast.classList.remove('show');
+
+        }, 2600);
+
+    }
+
+});
+
+</script>
+
+</body>
+</html>
