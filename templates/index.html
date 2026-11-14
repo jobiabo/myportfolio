@@ -14,11 +14,6 @@
 <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
-
-/* =========================================
-   1. GLOBAL VARIABLES & RESET
-========================================= */
-
 :root {
     --bg:#090d14;
     --panel:#101722;
@@ -32,13 +27,9 @@
     --max:1160px;
 }
 
-* {
-    box-sizing:border-box;
-}
+* { box-sizing:border-box; }
 
-html {
-    scroll-behavior:smooth;
-}
+html { scroll-behavior:smooth; }
 
 body {
     margin:0;
@@ -51,14 +42,8 @@ body {
     line-height:1.65;
 }
 
-a {
-    color:inherit;
-    text-decoration:none;
-}
-
-button {
-    font:inherit;
-}
+a { color:inherit; text-decoration:none; }
+button { font:inherit; }
 
 .wrap {
     width:min(var(--max),calc(100% - 44px));
@@ -76,14 +61,9 @@ button {
     color:var(--cyan);
 }
 
-.muted {
-    color:var(--muted);
-}
+.muted { color:var(--muted); }
 
-
-/* =========================================
-   2. GENERAL SECTIONS
-========================================= */
+/* GENERAL SECTIONS */
 
 .section {
     padding:104px 0;
@@ -111,10 +91,7 @@ button {
     margin:0;
 }
 
-
-/* =========================================
-   3. NAVIGATION
-========================================= */
+/* NAVIGATION */
 
 .nav {
     position:sticky;
@@ -138,9 +115,7 @@ button {
     font-size:1.05rem;
 }
 
-.brand span {
-    color:var(--cyan);
-}
+.brand span { color:var(--cyan); }
 
 .navlinks {
     display:flex;
@@ -150,9 +125,7 @@ button {
     color:#c4d0dc;
 }
 
-.navlinks a:hover {
-    color:var(--cyan);
-}
+.navlinks a:hover { color:var(--cyan); }
 
 .nav-cta,.button {
     display:inline-flex;
@@ -189,10 +162,7 @@ button {
     border-radius:7px;
 }
 
-
-/* =========================================
-   4. HERO SECTION
-========================================= */
+/* HERO */
 
 .hero {
     padding:82px 0 94px;
@@ -259,21 +229,7 @@ button {
     margin-right:8px;
 }
 
-
-/* =========================================
-   5. PROFILE IMAGE SECTION
-
-   IMPORTANT:
-   This section controls the portrait frame
-   and the image displayed inside it.
-
-   .portrait-wrap = Entire portrait area
-   .portrait-frame = The actual image frame
-   .portrait-frame img = Your profile picture
-
-   Adjust the image positioning without
-   moving the frame itself.
-========================================= */
+/* PROFILE IMAGE */
 
 .portrait-wrap {
     position:relative;
@@ -282,7 +238,6 @@ button {
     width:100%;
 }
 
-/* The frame surrounding your picture */
 .portrait-frame {
     position:relative;
     aspect-ratio:4/5;
@@ -293,46 +248,14 @@ button {
     box-shadow:0 30px 90px rgba(0,0,0,.35);
 }
 
-/* =========================================
-   PROFILE IMAGE POSITION CONTROLS
-
-   object-fit: cover
-   Makes your picture fill the frame.
-
-   object-position: 35% 30%
-   First value = Horizontal positioning.
-   Second value = Vertical positioning.
-
-   HORIZONTAL:
-   0%   = Left
-   35%  = More towards the left
-   50%  = Center
-   70%  = More towards the right
-   100% = Right
-
-   VERTICAL:
-   0%   = Top
-   30%  = Towards the top
-   50%  = Center
-   70%  = Towards the bottom
-   100% = Bottom
-
-   Change these values until your face
-   and upper body fit properly in the frame.
-========================================= */
-
 .portrait-frame img {
     width:100%;
     height:100%;
     object-fit:cover;
-
-    /* EDIT THESE TWO VALUES TO REPOSITION YOUR IMAGE */
     object-position:35% 30%;
-
     display:block;
 }
 
-/* Placeholder shown when no profile image is available */
 .portrait-placeholder {
     height:100%;
     display:flex;
@@ -367,7 +290,6 @@ button {
     z-index:1;
 }
 
-/* Decorative text beside the picture */
 .portrait-note {
     position:absolute;
     left:-30px;
@@ -381,11 +303,8 @@ button {
     box-shadow:0 14px 30px #0006;
 }
 
-.portrait-note span {
-    color:var(--cyan);
-}
+.portrait-note span { color:var(--cyan); }
 
-/* Decorative border behind the image */
 .hero-grid {
     position:absolute;
     inset:-18px -18px 18px 18px;
@@ -394,10 +313,7 @@ button {
     pointer-events:none;
 }
 
-
-/* =========================================
-   6. INTRO STRIP
-========================================= */
+/* INTRO STRIP */
 
 .intro-strip {
     display:grid;
@@ -423,10 +339,7 @@ button {
     color:var(--muted);
 }
 
-
-/* =========================================
-   7. ABOUT SECTION
-========================================= */
+/* ABOUT */
 
 .about-grid {
     display:grid;
@@ -439,9 +352,7 @@ button {
     color:#b7c5d1;
 }
 
-.about-text p {
-    margin-top:0;
-}
+.about-text p { margin-top:0; }
 
 .quote {
     border-left:2px solid var(--cyan);
@@ -475,14 +386,9 @@ button {
     font-size:.9rem;
 }
 
-.principle small {
-    color:var(--muted);
-}
+.principle small { color:var(--muted); }
 
-
-/* =========================================
-   8. PROJECTS SECTION
-========================================= */
+/* PROJECTS */
 
 .projects {
     display:grid;
@@ -586,10 +492,7 @@ button {
     font-size:.76rem;
 }
 
-
-/* =========================================
-   9. SKILLS SECTION
-========================================= */
+/* SKILLS */
 
 .skills-grid {
     display:grid;
@@ -634,10 +537,7 @@ button {
     border-radius:5px;
 }
 
-
-/* =========================================
-   10. JOURNEY SECTION
-========================================= */
+/* JOURNEY */
 
 .journey {
     display:grid;
@@ -662,10 +562,7 @@ button {
     margin:0;
 }
 
-
-/* =========================================
-   11. CONTACT SECTION
-========================================= */
+/* CONTACT */
 
 .contact-panel {
     display:grid;
@@ -690,10 +587,7 @@ button {
     color:var(--muted);
 }
 
-
-/* =========================================
-   12. FOOTER & ANIMATIONS
-========================================= */
+/* FOOTER & ANIMATIONS */
 
 footer {
     padding:26px 0 40px;
@@ -715,33 +609,9 @@ footer {
     transform:none;
 }
 
-.toast {
-    position:fixed;
-    bottom:20px;
-    left:50%;
-    transform:translate(-50%,20px);
-    opacity:0;
-    pointer-events:none;
-    background:#1a2938;
-    border:1px solid var(--line);
-    padding:12px 17px;
-    border-radius:8px;
-    font-size:.8rem;
-    transition:.2s;
-}
-
-.toast.show {
-    opacity:1;
-    transform:translate(-50%,0);
-}
-
-
-/* =========================================
-   13. TABLET & MOBILE RESPONSIVENESS
-========================================= */
+/* RESPONSIVE */
 
 @media(max-width:800px) {
-
     .navlinks {
         display:none;
         position:absolute;
@@ -755,17 +625,9 @@ footer {
         align-items:flex-start;
     }
 
-    .navlinks.open {
-        display:flex;
-    }
-
-    .menu {
-        display:block;
-    }
-
-    .nav-cta {
-        display:none;
-    }
+    .navlinks.open { display:flex; }
+    .menu { display:block; }
+    .nav-cta { display:none; }
 
     .hero {
         grid-template-columns:1fr;
@@ -773,9 +635,7 @@ footer {
         padding-top:62px;
     }
 
-    .hero-copy {
-        font-size:.96rem;
-    }
+    .hero-copy { font-size:.96rem; }
 
     .portrait-wrap {
         max-width:360px;
@@ -791,37 +651,21 @@ footer {
         gap:32px;
     }
 
-    .skills-grid {
-        grid-template-columns:repeat(2,1fr);
-    }
+    .skills-grid { grid-template-columns:repeat(2,1fr); }
 
-    .section {
-        padding:76px 0;
-    }
+    .section { padding:76px 0; }
 
-    .section-head {
-        display:block;
-    }
+    .section-head { display:block; }
 
-    .section-head p {
-        margin-top:15px;
-    }
+    .section-head p { margin-top:15px; }
 
-    .contact-panel {
-        grid-template-columns:1fr;
-    }
+    .contact-panel { grid-template-columns:1fr; }
 
-    .contact-panel .button {
-        justify-self:start;
-    }
+    .contact-panel .button { justify-self:start; }
 }
 
-
 @media(max-width:540px) {
-
-    .wrap {
-        width:min(100% - 32px,var(--max));
-    }
+    .wrap { width:min(100% - 32px,var(--max)); }
 
     .projects,.skills-grid,.journey,.intro-strip {
         grid-template-columns:1fr;
@@ -832,36 +676,22 @@ footer {
         padding:22px;
     }
 
-    .hero {
-        min-height:auto;
-    }
+    .hero { min-height:auto; }
 
-    .portrait-note {
-        left:-8px;
-    }
+    .portrait-note { left:-8px; }
 
-    .section {
-        padding:66px 0;
-    }
+    .section { padding:66px 0; }
 
-    .contact-panel {
-        padding:25px;
-    }
+    .contact-panel { padding:25px; }
 
-    footer {
-        flex-direction:column;
-    }
+    footer { flex-direction:column; }
 
-    .hero-actions .button {
-        width:100%;
-    }
+    .hero-actions .button { width:100%; }
 }
 
-
-/* Respect reduced-motion accessibility settings */
+/* REDUCED MOTION ACCESSIBILITY */
 
 @media(prefers-reduced-motion:reduce) {
-
     *,*:before,*:after {
         scroll-behavior:auto!important;
         transition:none!important;
@@ -873,20 +703,15 @@ footer {
         transform:none;
     }
 }
-
 </style>
 </head>
 
-
 <body>
 
-<!-- =========================================
-     NAVIGATION
-========================================= -->
+<!-- NAVIGATION -->
 
 <header class="nav">
     <div class="wrap navinner">
-
         <a class="brand" href="#top">
             JOEL OBIABO<span>.</span>
         </a>
@@ -904,21 +729,15 @@ footer {
         <button class="menu" id="menu" aria-label="Toggle navigation" aria-expanded="false">
             ☰
         </button>
-
     </div>
 </header>
 
-
 <main id="top">
 
-<!-- =========================================
-     HERO SECTION
-========================================= -->
+<!-- HERO SECTION -->
 
 <section class="wrap hero">
-
     <div>
-
         <div class="eyebrow">
             FULL-STACK DEVELOPER & PRODUCT BUILDER
         </div>
@@ -955,45 +774,30 @@ footer {
             <span>Mobile apps</span>
             <span>Visual design</span>
         </div>
-
     </div>
 
-
-    <!-- PROFILE IMAGE AND FRAME -->
+    <!-- PROFILE IMAGE -->
 
     <div class="portrait-wrap">
-
         <div class="hero-grid"></div>
 
         <div class="portrait-frame" id="portrait">
-
             <div class="portrait-placeholder">
-
                 <div class="silhouette"></div>
-
                 <strong>Joel Obiabo</strong>
-
                 <small>Profile portrait goes here</small>
-
             </div>
-
         </div>
 
         <div class="portrait-note">
             CREATIVE MINDSET <span>×</span> ENGINEERING
         </div>
-
     </div>
-
 </section>
 
-
-<!-- =========================================
-     INTRO STRIP
-========================================= -->
+<!-- INTRO STRIP -->
 
 <div class="wrap intro-strip">
-
     <div class="strip-item">
         <b>Build</b>
         <span>Turning ideas into working products</span>
@@ -1008,20 +812,13 @@ footer {
         <b>Design</b>
         <span>Making digital experiences feel considered</span>
     </div>
-
 </div>
 
-
-<!-- =========================================
-     ABOUT SECTION
-========================================= -->
+<!-- ABOUT -->
 
 <section class="section" id="about">
-
 <div class="wrap">
-
     <div class="section-head">
-
         <div>
             <div class="eyebrow">01 / A LITTLE ABOUT ME</div>
             <h2>Engineering meets<br>creative thinking.</h2>
@@ -1032,14 +829,10 @@ footer {
             shaping an experience, building the product and improving
             it through iteration.
         </p>
-
     </div>
 
-
     <div class="about-grid">
-
         <div class="about-text">
-
             <p>
                 My path brings together software development and visual design.
                 I work across backend, web and mobile technologies, while my
@@ -1058,12 +851,9 @@ footer {
                 “Good products bring together useful ideas, thoughtful
                 engineering and experiences people enjoy using.”
             </div>
-
         </div>
 
-
         <div class="principles">
-
             <div class="principle">
                 <div class="n">01</div>
                 <div>
@@ -1087,26 +877,16 @@ footer {
                     <small>Make the product clear, usable and visually coherent.</small>
                 </div>
             </div>
-
         </div>
-
     </div>
-
 </div>
-
 </section>
 
-
-<!-- =========================================
-     PROJECTS SECTION
-========================================= -->
+<!-- PROJECTS -->
 
 <section class="section" id="projects">
-
 <div class="wrap">
-
     <div class="section-head">
-
         <div>
             <div class="eyebrow">02 / SELECTED WORK</div>
             <h2>Things I've built.</h2>
@@ -1117,16 +897,12 @@ footer {
             Each project is a chance to solve a different problem and grow
             as a builder.
         </p>
-
     </div>
-
 
     <div class="projects">
 
         <article class="project" style="--glow:rgba(105,217,223,.16)">
-
             <div>
-
                 <div class="project-top">
                     <span class="index">PROJECT / 01</span>
                     <span class="project-type">WEB APP · CALCULATOR</span>
@@ -1146,21 +922,16 @@ footer {
                     <span class="tag">JavaScript</span>
                     <span class="tag">PWA</span>
                 </div>
-
             </div>
 
             <div class="project-foot">
                 <span>Backend & web development</span>
                 <span>↗</span>
             </div>
-
         </article>
 
-
         <article class="project" style="--glow:rgba(169,154,255,.17)">
-
             <div>
-
                 <div class="project-top">
                     <span class="index">PROJECT / 02</span>
                     <span class="project-type">PLATFORM · CONSTRUCTION</span>
@@ -1169,9 +940,9 @@ footer {
                 <h3>BuildNet</h3>
 
                 <p>
-                    A construction-focused platform concept bringing people,
-                    projects and opportunities in the building industry
-                    into one place.
+                    A construction and project connection platform designed
+                    to bring industry professionals, businesses, jobs and
+                    building opportunities together.
                 </p>
 
                 <div class="tags">
@@ -1179,32 +950,26 @@ footer {
                     <span class="tag">Web platform</span>
                     <span class="tag">Construction tech</span>
                 </div>
-
             </div>
 
             <div class="project-foot">
                 <span>Product design & development</span>
                 <span>↗</span>
             </div>
-
         </article>
 
-
         <article class="project" style="--glow:rgba(199,239,154,.13)">
-
             <div>
-
                 <div class="project-top">
                     <span class="index">PROJECT / 03</span>
                     <span class="project-type">MOBILE APP · DELIVERY</span>
                 </div>
 
-                <h3>Toha</h3>
+                <h3>Food Chef</h3>
 
                 <p>
-                    A food-chef delivery mobile application built with Flutter.
-                    A practical project exploring mobile application development
-                    and user-facing flows.
+                    A food delivery mobile application built with Dart and Flutter,
+                    providing experience with mobile application development.
                 </p>
 
                 <div class="tags">
@@ -1212,32 +977,27 @@ footer {
                     <span class="tag">Flutter</span>
                     <span class="tag">Mobile</span>
                 </div>
-
             </div>
 
             <div class="project-foot">
                 <span>Mobile application development</span>
                 <span>↗</span>
             </div>
-
         </article>
 
-
         <article class="project" style="--glow:rgba(105,217,223,.12)">
-
             <div>
-
                 <div class="project-top">
                     <span class="index">PROJECT / 04</span>
-                    <span class="project-type">WEB PLATFORM · PRODUCTIVITY</span>
+                    <span class="project-type">WEB PLATFORM</span>
                 </div>
 
                 <h3>Taskflow</h3>
 
                 <p>
-                    A task management platform built with Python and Django,
-                    focused on organizing work and managing tasks through
-                    a web application.
+                    A web platform built with Python and Django, giving me
+                    practical experience working with a Python-based web
+                    development framework.
                 </p>
 
                 <div class="tags">
@@ -1245,40 +1005,29 @@ footer {
                     <span class="tag">Django</span>
                     <span class="tag">Web development</span>
                 </div>
-
             </div>
 
             <div class="project-foot">
                 <span>Backend & web development</span>
                 <span>↗</span>
             </div>
-
         </article>
 
     </div>
-
 
     <p class="muted" style="font-size:.76rem;margin-top:18px">
         Project descriptions are intentionally concise. Screenshots,
         live demos, repositories and deeper case studies can be added
         once their links and details are confirmed.
     </p>
-
 </div>
-
 </section>
 
-
-<!-- =========================================
-     SKILLS SECTION
-========================================= -->
+<!-- SKILLS -->
 
 <section class="section" id="skills">
-
 <div class="wrap">
-
     <div class="section-head">
-
         <div>
             <div class="eyebrow">03 / WHAT I WORK WITH</div>
             <h2>A growing toolkit.</h2>
@@ -1289,12 +1038,9 @@ footer {
             This is a snapshot of the tools I've worked with—not a claim
             of equal expertise in every area.
         </p>
-
     </div>
 
-
     <div class="skills-grid">
-
         <div class="skill-card">
             <div class="symbol">⌘</div>
             <h3>Backend & Web</h3>
@@ -1309,7 +1055,6 @@ footer {
             </div>
         </div>
 
-
         <div class="skill-card">
             <div class="symbol">▣</div>
             <h3>Mobile Development</h3>
@@ -1319,7 +1064,6 @@ footer {
                 <span>Flutter</span>
             </div>
         </div>
-
 
         <div class="skill-card">
             <div class="symbol">✳</div>
@@ -1332,7 +1076,6 @@ footer {
             </div>
         </div>
 
-
         <div class="skill-card">
             <div class="symbol">▶</div>
             <h3>Video & Motion</h3>
@@ -1342,7 +1085,6 @@ footer {
                 <span>CapCut</span>
             </div>
         </div>
-
 
         <div class="skill-card">
             <div class="symbol">◈</div>
@@ -1355,7 +1097,6 @@ footer {
             </div>
         </div>
 
-
         <div class="skill-card">
             <div class="symbol">↗</div>
             <h3>Currently Growing</h3>
@@ -1366,24 +1107,15 @@ footer {
                 <span>Deployment</span>
             </div>
         </div>
-
     </div>
-
 </div>
-
 </section>
 
-
-<!-- =========================================
-     JOURNEY SECTION
-========================================= -->
+<!-- JOURNEY -->
 
 <section class="section" id="journey">
-
 <div class="wrap">
-
     <div class="section-head">
-
         <div>
             <div class="eyebrow">04 / THE APPROACH</div>
             <h2>Always building.<br>Always learning.</h2>
@@ -1394,12 +1126,9 @@ footer {
             The goal is to keep improving the quality of what I can design,
             build and explain.
         </p>
-
     </div>
 
-
     <div class="journey">
-
         <article>
             <div class="eyebrow">01 — EXPLORE</div>
             <h3>Understand the problem</h3>
@@ -1426,26 +1155,16 @@ footer {
                 better next time.
             </p>
         </article>
-
     </div>
-
 </div>
-
 </section>
 
-
-<!-- =========================================
-     CONTACT SECTION
-========================================= -->
+<!-- CONTACT -->
 
 <section class="section" id="contact">
-
 <div class="wrap">
-
     <div class="contact-panel">
-
         <div>
-
             <div class="eyebrow">05 / HAVE SOMETHING IN MIND?</div>
 
             <h2>Let's build<br>something useful.</h2>
@@ -1455,158 +1174,86 @@ footer {
                 product ideas, collaboration and creative-technical work.
                 Reach out and let's see what we can make.
             </p>
-
         </div>
 
         <a class="button primary"
-           href="mailto:ADD-YOUR-EMAIL-HERE"
-           id="emailLink">
+           href="mailto:joelobiabo@gmail.com?subject=Project%20Inquiry">
             Start a conversation ↗
         </a>
-
     </div>
-
-    <p class="muted" style="font-size:.72rem;margin:14px 2px 0">
-        Before publishing, replace the email link with your preferred
-        contact address and add your professional social links.
-    </p>
-
 </div>
-
 </section>
 
 </main>
 
-
-<!-- =========================================
-     FOOTER
-========================================= -->
+<!-- FOOTER -->
 
 <footer class="wrap">
-
     <span>
         © <span id="year"></span> Joel Obiabo. Built with curiosity.
     </span>
 
     <span>FULL-STACK DEVELOPER & PRODUCT BUILDER</span>
-
 </footer>
 
-<div class="toast" id="toast" role="status"></div>
-
-
-<!-- =========================================
-     JAVASCRIPT
-========================================= -->
+<!-- JAVASCRIPT -->
 
 <script>
 
-/* =========================================
-   1. MOBILE NAVIGATION
-========================================= */
+/* MOBILE NAVIGATION */
 
 const menu = document.getElementById('menu');
 const nav = document.getElementById('navlinks');
 
 menu.addEventListener('click', () => {
-
     const open = nav.classList.toggle('open');
 
     menu.setAttribute('aria-expanded', String(open));
-
     menu.textContent = open ? '✕' : '☰';
-
 });
 
 nav.querySelectorAll('a').forEach(a => {
-
     a.addEventListener('click', () => {
-
         nav.classList.remove('open');
 
         menu.setAttribute('aria-expanded', 'false');
-
         menu.textContent = '☰';
-
     });
-
 });
 
-
-/* =========================================
-   2. AUTOMATIC COPYRIGHT YEAR
-========================================= */
+/* AUTOMATIC COPYRIGHT YEAR */
 
 document.getElementById('year').textContent =
     new Date().getFullYear();
 
-
-/* =========================================
-   3. SCROLL REVEAL ANIMATION
-========================================= */
+/* SCROLL REVEAL ANIMATION */
 
 const observer = new IntersectionObserver(
     entries => entries.forEach(e => {
-
         if (e.isIntersecting) {
-
             e.target.classList.add('show');
-
             observer.unobserve(e.target);
-
         }
-
     }),
     { threshold:.12 }
 );
 
 document.querySelectorAll('.section,.intro-strip').forEach(el => {
-
     el.classList.add('reveal');
-
     observer.observe(el);
-
 });
 
-
-/* =========================================
-   4. LOAD PROFILE IMAGE
-
-   Place your picture here:
-
-   assets/profile.jpg
-
-   Folder structure:
-
-   portfolio/
-   ├── index.html
-   └── assets/
-       └── profile.jpg
-
-   IMPORTANT:
-   The image positioning is controlled here too.
-
-   objectPosition = '35% 30%'
-
-   First value = Horizontal crop.
-   Second value = Vertical crop.
-
-   Adjust these values to fit your face
-   and upper body inside the portrait frame.
-========================================= */
+/* LOAD PROFILE IMAGE */
 
 const photo = new Image();
 
 photo.onload = () => {
-
     const frame = document.getElementById('portrait');
 
-    // Remove the placeholder once the image loads
+    // Remove placeholder when the image loads
     frame.innerHTML = '';
 
-    // Add your actual profile picture
-    frame.appendChild(photo);
-
+    // Set image accessibility text
     photo.alt = 'Joel Obiabo - Profile portrait';
 
     // Image styling
@@ -1614,13 +1261,11 @@ photo.onload = () => {
         width:100%;
         height:100%;
         object-fit:cover;
-
-        /* EDIT THESE VALUES TO ADJUST YOUR IMAGE */
-        object-position:65% 35%;
-
+        object-position:35% 30%;
         display:block;
     `;
 
+    frame.appendChild(photo);
 };
 
 photo.onerror = () => {
@@ -1628,35 +1273,6 @@ photo.onerror = () => {
 };
 
 photo.src = 'assets/profile.jpg';
-
-
-/* =========================================
-   5. CONTACT EMAIL / TOAST
-========================================= */
-
-const emailLink = document.getElementById('emailLink');
-
-emailLink.addEventListener('click', e => {
-
-    if (emailLink.getAttribute('href').includes('joelobiabo@gmail.com')) {
-
-        e.preventDefault();
-
-        const toast = document.getElementById('toast');
-
-        toast.textContent = 'joelobiabo@gmail.com';
-
-        toast.classList.add('show');
-
-        setTimeout(() => {
-
-            toast.classList.remove('show');
-
-        }, 2600);
-
-    }
-
-});
 
 </script>
 
